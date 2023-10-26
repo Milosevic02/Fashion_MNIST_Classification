@@ -39,3 +39,14 @@ test_loss, test_accuracy = model.evaluate(X_test, y_test, verbose=0)
 
 print("Train accuracy:", train_accuracy)
 print("Test accuracy:", test_accuracy)
+
+import matplotlib.pyplot as plt
+plt.plot(r.history['loss'], label='loss')
+plt.plot(r.history['val_loss'], label='val_loss')
+plt.legend()
+plt.show()
+
+plt.plot(r.history['accuracy'], label='acc')
+plt.plot(r.history['val_accuracy'], label='val_acc')
+plt.legend()
+plt.show()
